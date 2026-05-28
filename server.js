@@ -14,4 +14,12 @@ app.get('/profil', (req, res) => {
  res.json({ nama: 'Nadira Anindita', nim: '0920240052', prodi: 'TRPL', topik: 'Serverless Azure' });
 });
 
+app.get('/waktu', (req, res) => {
+    res.json({ 
+        serverTime: new Date().toLocaleTimeString(),
+        date: new Date().toLocaleDateString(),
+        timezone: "UTC/Server Time"
+    });
+});
+
 app.listen(port, () => console.log(`Server berjalan pada port ${port}`));
